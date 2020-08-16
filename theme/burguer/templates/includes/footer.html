@@ -1,0 +1,84 @@
+<!-- Lock -->
+<section id="lock">
+    <h2>{{LOCK_TITLE}}</h2>
+    <p>{{LOCK_TEXT}}</p>
+</section>
+
+<!-- Cardápio
+<div id="cardapio">
+</div> -->
+
+<!-- Footer -->
+<footer>
+    <!-- Container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-xs-12 col-lg-offset-1 pull-right">
+                <div class="contact_us">
+                    {% if CONTACT %}
+                        <h4>Contato</h4>
+                        {% if CONTACT.email %}
+                        <a href="mailto:{{EMAIL}}">E-mail: {{CONTACT.email}}</a>
+                        {% endif %}
+                        {% if CONTACT.phone %}
+                        <a href="tel:{{CONTACT.phone}}">Telefone: {{CONTACT.phone}}</a>
+                        {% endif %}
+                    {% endif %}
+
+                    {% if ADDRESS %}
+                    <address>
+                        {{ADDRESS.address}}<br/>
+                        {{ADDRESS.cep}}, {{ADDRESS.city}}<br/>
+                    </address>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6 col-xs-12 pull-right">
+                <div class="basic_info">
+                    <a href="">
+                        <img class="footer_logo" src="{{SITEURL}}/theme/images/footer_logo.png"
+                             alt="Burger"/>
+                    </a>
+
+                    {% if SOCIAL %}
+                    <ul class="list-inline social">
+                        {% for name, link in SOCIAL %}
+                        <li><a href="{{link}}" class="fa fa-{{name}}"></a></li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    <div class="footer-copyright">
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            Made with
+                            <i class="fa fa-heart"></i>
+                            por
+                            <a target="_blank"
+                               href="https://bootstrapthemes.co/item/burger-free-bootstrap-restaurant-landing-page-template/">Bootstrap
+                                Themes</a> <br/>
+                        </p>
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            Alterado, publicado e mantido
+                            <i class="fa fa-heart"></i>
+                            por
+                            <a target="_blank" href="https://www.flavialopes.dev">Flávia Lopes</a> <br/>
+                            {{CURRENTYEAR}}. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div><!-- Container end -->
+</footer><!-- Footer end -->
+
+<!-- scroll up-->
+<div class="scrollup">
+    <a href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+<!-- End off scroll up -->
+
+<!-- JavaScript -->
+<script src="{{SITEURL}}/theme/js/jquery-1.12.1.min.js"></script>
+<script src="{{SITEURL}}/theme/bootstrap/js/bootstrap.min.js"></script>

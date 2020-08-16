@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html lang="{{ DEFAULT_LANG }}" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="{{ DEFAULT_LANG }}"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta property="og:url" content="{{SITEURL}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="{{SITETITLE}}"/>
+    <meta property="og:description" content="{{SITEDESCRIPTION}}"/>
+    <meta property="og:image" content="{{ SITEURL }}/{{ DEFAULT_METADATA.logo }}"/>
+    <meta property="og:site_name" content="{{ SITENAME }}">
+
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{{SITEDESCRIPTION}}">
+    <meta name="author" content="{{AUTHOR}}">
+    <meta name="keywords" content="{{ KEYWORDS }}">
+
+    <title>{{ SITENAME|title }}</title>
+    <link href="{{ SITEURL }}/{{ DEFAULT_METADATA.favicon }}" rel="icon" type="image/x-icon"/>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/flaticon.css"/>
+
+    <!-- Animate -->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/animate.css"/>
+    <!-- Bootsnav -->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootsnav.css"/>
+    <!-- Color style -->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/color.css"/>
+
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/custom.css"/>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target="#navbar-menu" data-offset="100">
+
+{% block preloader %}
+{% endblock %}
+
+{% block navbar %}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+
+<!-- Block Content -->
+<section id="block">
+    <div class="container">
+
+        {% block content_first_section %}
+        {% endblock %}
+
+        {% block content_second_section %}
+        {% endblock %}
+
+        {% block content_third_section %}
+        {% endblock %}
+
+        {% block content_forth_section %}
+        {% endblock %}
+
+    </div>
+</section><!-- Block Content end-->
+
+{% block footer %}
+{% endblock %}
+
+</body>
+</html>

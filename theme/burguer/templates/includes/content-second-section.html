@@ -1,0 +1,48 @@
+<!-- Second section -->
+<div class="row">
+    <div class="col-md-6">
+        <div class="classic" style="background: url({{SITEURL}}/theme/images/{{SECOND_CONTENT_CLASSIC.image}})no-repeat;
+        background-size: 100% 100%;margin-top:25px;height:360px;position:relative;overflow:hidden;">
+            <span class="classic_btn">Clássico</span>
+            <div class="overlay">
+                <h3>{{ SECOND_CONTENT_CLASSIC.name|title }}</h3>
+                <p class="overlay_content">{{ SECOND_CONTENT_CLASSIC.desc|title }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <!-- Carousel -->
+        <div id="small_carousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#small_carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#small_carousel" data-slide-to="1"></li>
+                <li data-target="#small_carousel" data-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-caption">
+                <h3>OS MAIS VENDIDOS</h3>
+                <hr/>
+                <div class="clearfix"></div>
+                <div class="info_btn_shadow">
+
+                </div>
+            </div>
+
+            <!-- carousel inner -->
+            <div class="carousel-inner" role="listbox">
+                {% for it in SECOND_CONTENT_CAROUSEL %}
+                {% if loop.index == 1 %}
+                <div class="item active">
+                    {% else %}
+                    <div class="item">
+                        {% endif %}
+                        <span class="info_btn">{{it.name}}</span>
+                        <img src="{{SITEURL}}/theme/images/{{it.image}}" alt="{{it.name}}"/>
+                    </div>
+                    {% endfor %}
+                </div><!-- carousel inner end -->
+            </div><!-- Carousel end-->
+        </div>
+    </div><!-- second section end -->
