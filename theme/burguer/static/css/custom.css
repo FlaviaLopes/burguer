@@ -637,6 +637,7 @@ header .caption {
 /* Forth Secition */
 .menu, .drinks, .sides {
     margin-top: 35px;
+    margin-bottom: 35px;
     height: 190px;
     padding: 75px 0 40px;
 }
@@ -659,6 +660,8 @@ header .caption {
 }
 .forth_sec h2 {
     display: inline-block;
+    font-size: 32px;
+    padding-top: 15px;
 }
 .inner_content .flaticon-burger,.inner_content .flaticon-food {
     margin-left: 15px;
@@ -922,6 +925,9 @@ address,.subscribe > p {
     }
     .forth_sec .flaticon {
         margin-right: 15px;;
+    }
+    .forth_sec .flaticon:before {
+        font-size: 60px;
     }
 
     #lock > h2 {

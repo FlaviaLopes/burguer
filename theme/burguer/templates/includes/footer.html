@@ -1,13 +1,3 @@
-<!-- Lock -->
-<section id="lock">
-    <h2>{{LOCK_TITLE}}</h2>
-    <p>{{LOCK_TEXT}}</p>
-</section>
-
-<!-- Cardápio
-<div id="cardapio">
-</div> -->
-
 <!-- Footer -->
 <footer>
     <!-- Container -->
@@ -21,7 +11,7 @@
                         <a href="mailto:{{EMAIL}}">E-mail: {{CONTACT.email}}</a>
                         {% endif %}
                         {% if CONTACT.phone %}
-                        <a href="tel:{{CONTACT.phone}}">Telefone: {{CONTACT.phone}}</a>
+                        <a href="tel:{{CONTACT.phone}}">Telefone: +{{CONTACT.phone[:2]}} ({{CONTACT.phone[2:4]}}) {{CONTACT.phone[4:]}}</a>
                         {% endif %}
                     {% endif %}
 
