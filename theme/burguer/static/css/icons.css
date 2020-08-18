@@ -103,3 +103,7 @@
 .ico-mobile-phone:before {
     content: "\f10b"
 }
+
+.ico-chevron-up:before {
+    content: "\f077"
+}
