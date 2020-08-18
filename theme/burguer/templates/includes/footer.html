@@ -3,54 +3,82 @@
     <!-- Container -->
     <div class="container">
         <div class="row">
-            <div class="col-lg-3 col-sm-6 col-xs-12 col-lg-offset-1 pull-right">
-                <div class="contact_us">
+            <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
+                <div class="schedule col-xs-offset-3">
+                    <h4>Horário</h4>
+                    <p><span style="font-weight: bold">{{SITENAME}}</span> abre nos seguintes horários:</p>
+                    <p>
+                        {% for it in SCHEDULE %}
+                            {{it.day|title}}: {{it.time}}<br>
+                        {% endfor %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
+                <div class="contact_us col-xs-offset-3">
                     {% if CONTACT %}
-                        <h4>Contato</h4>
-                        {% if CONTACT.email %}
-                        <a href="mailto:{{EMAIL}}">E-mail: {{CONTACT.email}}</a>
-                        {% endif %}
-                        {% if CONTACT.phone %}
-                        <a href="tel:{{CONTACT.phone}}">Telefone: +{{CONTACT.phone[:2]}} ({{CONTACT.phone[2:4]}}) {{CONTACT.phone[4:]}}</a>
-                        {% endif %}
+                    <h4>Contato</h4>
+                        {% for it in CONTACT %}
+                            {% if it.type == 'email' %}
+                            <a href="mailto:{{it.contact}}">
+                                <span class="ico ico-paperclip"> {{it.contact}}</span>
+                            </a>
+                            {% endif %}
+                            {% if it.type == 'phone' %}
+                            {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:8], it.contact[8:]) %}
+                            <a href="tel:{{it.contact}}">
+                                <span class="ico ico-phone"> {{contact}}</span>
+                            </a>
+                            {% endif %}
+                            {% if it.type == 'mobile' %}
+                            {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
+                            <a href="tel:{{it.contact}}">
+                                <span class="ico ico-mobile-phone"> {{contact}}</span>
+                            </a>
+                            {% endif %}
+                            {% if it.type == 'zap' %}
+                            {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
+                            <a href="https://api.whatsapp.com/send?phone={{it.contact}}">
+                                <span class="ico ico-whatsapp"> {{contact}}</span>
+                            </a>
+                            {% endif %}
+                        {% endfor %}
                     {% endif %}
 
                     {% if ADDRESS %}
-                    <address>
-                        {{ADDRESS.address}}<br/>
-                        {{ADDRESS.cep}}, {{ADDRESS.city}}<br/>
-                    </address>
+                        <address>
+                            {{ADDRESS.address}}<br/>
+                            {{ADDRESS.cep}}, {{ADDRESS.city}}<br/>
+                        </address>
                     {% endif %}
                 </div>
             </div>
 
-            <div class="col-lg-4 col-sm-6 col-xs-12 pull-right">
-                <div class="basic_info">
+            <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
+                <div class="basic_info col-xs-offset-3">
                     <a href="">
                         <img class="footer_logo" src="{{SITEURL}}/theme/images/footer_logo.png"
                              alt="Burger"/>
                     </a>
 
                     {% if SOCIAL %}
-                    <ul class="list-inline social">
-                        {% for name, link in SOCIAL %}
-                        <li><a href="{{link}}" class="fa fa-{{name}}"></a></li>
-                        {% endfor %}
-                    </ul>
+                        <ul class="list-inline social">
+                            {% for name, link in SOCIAL %}
+                                <li><a href="{{link}}" class="ico ico-{{name}}"></a></li>
+                            {% endfor %}
+                        </ul>
                     {% endif %}
 
                     <div class="footer-copyright">
                         <p class="wow fadeInRight" data-wow-duration="1s">
                             Made with
-                            <i class="fa fa-heart"></i>
-                            por
                             <a target="_blank"
                                href="https://bootstrapthemes.co/item/burger-free-bootstrap-restaurant-landing-page-template/">Bootstrap
                                 Themes</a> <br/>
                         </p>
                         <p class="wow fadeInRight" data-wow-duration="1s">
                             Alterado, publicado e mantido
-                            <i class="fa fa-heart"></i>
                             por
                             <a target="_blank" href="https://www.flavialopes.dev">Flávia Lopes</a> <br/>
                             {{CURRENTYEAR}}. All Rights Reserved
@@ -65,9 +93,12 @@
 
 <!-- scroll up-->
 <div class="scrollup">
-    <a href="#"><i class="fa fa-chevron-up"></i></a>
+    <a href="#"><i class="ico ico-chevron-up"></i></a>
 </div>
-<!-- End off scroll up -->
+<!-- End
+off
+scroll
+up -->
 
 <!-- JavaScript -->
 <script src="{{SITEURL}}/theme/js/jquery-1.12.1.min.js"></script>

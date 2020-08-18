@@ -1,5 +1,7 @@
 <!-- Header -->
-<header id="hello">
+<header id="hello" style="background: url({{SITEURL}}/theme/images/capa/capa.jpg)no-repeat;
+background-size: 100% 100%;
+color: #f1f1f1;overflow: hidden;">
     <!-- Container -->
     <div class="container">
         <div class="row">
@@ -10,10 +12,11 @@
 
                     <div class="inner_banner">
                         <div class="banner_content">
-                            <p>{{HEADER.text}}</p>
+                            {% set ingredients = HEADER.text.split(',') %}
+                            <p style="font-weight: bold">{% for it in ingredients %}* {{it}} {% endfor %}</p>
                         </div>
                         <div class="stamp">
-                            <img src="{{SITEURL}}/theme/images/stamp.png" alt=""/>
+                            <img src="{{SITEURL}}/theme/images/capa/stamp.png" alt=""/>
                         </div>
                     </div>
                 </div>

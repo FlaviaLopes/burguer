@@ -3,27 +3,32 @@
 <div class="row">
     <div class="col-sm-8">
         <div class="feature"
-             style="background: url({{SITEURL}}/theme/images/{{FIRST_CONTENT_FEATURED.image}})no-repeat;
+             style="background: url({{SITEURL}}/theme/images/primeira-sessao/{{FIRST_CONTENT_FEATURED.image}})no-repeat;
              background-size: 100% 100%;height: 360px;overflow:hidden;margin-top: 100px;">
             <div class="shack_burger">
                 <div class="chicken">
-                    <img src="{{SITEURL}}/theme/images/chicken.png" alt="Chicken"/>
+                    <img src="{{SITEURL}}/theme/images/primeira-sessao/chicken.png" alt="Chicken"/>
                 </div>
                 <h2>{{ FIRST_CONTENT_FEATURED.name|title }}</h2>
-                <p>{{ FIRST_CONTENT_FEATURED.desc }}</p>
+                <div style="font-weight: bold">
+                    {% set ingredients = FIRST_CONTENT_FEATURED.desc.split(',') %}
+                    <p>{% for it in ingredients %} <span class="glyphicon-asterisk">{{it}}</span> {%
+                        endfor %}</p>
+                </div>
             </div>
         </div>
     </div>
     <div class="col-sm-4">
         <div class="signature"
-             style="background: url({{SITEURL}}/theme/images/{{FIRST_CONTENT_SIGNATURE.image}})no-repeat;
+             style="background: url({{SITEURL}}/theme/images/primeira-sessao/{{FIRST_CONTENT_SIGNATURE.image}})no-repeat;
              background-size: 100% 100%;height: 360px;padding: 0 18px 18px;margin-top:100px;}">
             <div class="shape">
                 <span class="flaticon flaticon-burger"></span>
                 <p>{{ FIRST_CONTENT_SIGNATURE.name|title }}</p>
             </div>
             <div class="signature_content">
-                <p>{{ FIRST_CONTENT_SIGNATURE.desc }}</p>
+                {% set ingredients = FIRST_CONTENT_SIGNATURE.desc.split(',') %}
+                <p>{% for it in ingredients %} <span class="glyphicon-asterisk">{{it}}</span> {% endfor %}</p>
             </div>
         </div>
     </div>
