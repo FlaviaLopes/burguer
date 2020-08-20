@@ -9,7 +9,7 @@
                     <p><span style="font-weight: bold">{{SITENAME}}</span> abre nos seguintes horários:</p>
                     <p>
                         {% for it in SCHEDULE %}
-                            {{it.day|title}}: {{it.time}}<br>
+                        {{it.day|title}}: {{it.time}}<br>
                         {% endfor %}
                     </p>
                 </div>
@@ -19,38 +19,38 @@
                 <div class="contact_us col-xs-offset-3">
                     {% if CONTACT %}
                     <h4>Contato</h4>
-                        {% for it in CONTACT %}
-                            {% if it.type == 'email' %}
-                            <a href="mailto:{{it.contact}}">
-                                <span class="ico ico-paperclip"> {{it.contact}}</span>
-                            </a>
-                            {% endif %}
-                            {% if it.type == 'phone' %}
-                            {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:8], it.contact[8:]) %}
-                            <a href="tel:{{it.contact}}">
-                                <span class="ico ico-phone"> {{contact}}</span>
-                            </a>
-                            {% endif %}
-                            {% if it.type == 'mobile' %}
-                            {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
-                            <a href="tel:{{it.contact}}">
-                                <span class="ico ico-mobile-phone"> {{contact}}</span>
-                            </a>
-                            {% endif %}
-                            {% if it.type == 'zap' %}
-                            {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
-                            <a href="https://api.whatsapp.com/send?phone={{it.contact}}">
-                                <span class="ico ico-whatsapp"> {{contact}}</span>
-                            </a>
-                            {% endif %}
-                        {% endfor %}
+                    {% for it in CONTACT %}
+                    {% if it.type == 'email' %}
+                    <a href="mailto:{{it.contact}}">
+                        <span class="ico ico-paperclip"> {{it.contact}}</span>
+                    </a>
+                    {% endif %}
+                    {% if it.type == 'phone' %}
+                    {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:8], it.contact[8:]) %}
+                    <a href="tel:{{it.contact}}">
+                        <span class="ico ico-phone"> {{contact}}</span>
+                    </a>
+                    {% endif %}
+                    {% if it.type == 'mobile' %}
+                    {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
+                    <a href="tel:{{it.contact}}">
+                        <span class="ico ico-mobile-phone"> {{contact}}</span>
+                    </a>
+                    {% endif %}
+                    {% if it.type == 'zap' %}
+                    {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
+                    <a href="https://api.whatsapp.com/send?phone={{it.contact}}">
+                        <span class="ico ico-whatsapp"> {{contact}}</span>
+                    </a>
+                    {% endif %}
+                    {% endfor %}
                     {% endif %}
 
                     {% if ADDRESS %}
-                        <address>
-                            {{ADDRESS.address}}<br/>
-                            {{ADDRESS.cep}}, {{ADDRESS.city}}<br/>
-                        </address>
+                    <address>
+                        {{ADDRESS.address}}<br/>
+                        {{ADDRESS.cep}}, {{ADDRESS.city}}<br/>
+                    </address>
                     {% endif %}
                 </div>
             </div>
@@ -63,11 +63,11 @@
                     </a>
 
                     {% if SOCIAL %}
-                        <ul class="list-inline social">
-                            {% for name, link in SOCIAL %}
-                                <li><a href="{{link}}" class="ico ico-{{name}}"></a></li>
-                            {% endfor %}
-                        </ul>
+                    <ul class="list-inline social">
+                        {% for name, link in SOCIAL %}
+                        <li><a href="{{link}}" class="ico ico-{{name}}"></a></li>
+                        {% endfor %}
+                    </ul>
                     {% endif %}
 
                     <div class="footer-copyright">
@@ -95,11 +95,7 @@
 <div class="scrollup">
     <a href="#"><i class="ico ico-chevron-up"></i></a>
 </div>
-<!-- End
-off
-scroll
-up -->
 
 <!-- JavaScript -->
-<script src="{{SITEURL}}/theme/js/jquery-1.12.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/jquery/jquery@1.12.1/dist/jquery.min.js"></script>
 <script src="{{SITEURL}}/theme/bootstrap/js/bootstrap.min.js"></script>
