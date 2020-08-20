@@ -21,25 +21,27 @@
 
     <title>{{ SITENAME|title }}</title>
     <link href="{{ SITEURL }}/{{ DEFAULT_METADATA.favicon }}" rel="icon" type="image/x-icon"/>
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{SITEURL}}/theme/bootstrap/css/bootstrap.css"/>
-    <link rel="stylesheet" href="{{SITEURL}}/theme/css/icons.css"/>
-    <link rel="stylesheet" href="{{SITEURL}}/theme/css/flaticon.css"/>
 
-    <!-- Bootsnav -->
-    <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootsnav.css"/>
+       <!-- Stylesheet Bootstrap-->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/bootstrap/css/bootstrap.min.css"/>
+
+     <link rel="stylesheet" href="{{SITEURL}}/theme/bootstrap/css/critical.min.css"/>
 
     <!-- Custom stylesheet -->
-    <link rel="stylesheet" href="{{SITEURL}}/theme/css/custom.css"/>
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/custom.min.css"/>
+
+    <!-- Bootsnav -->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/bootsnav.min.css"/>
+
+    <!-- Stylesheets Preload-->
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/icons.min.css"/>
+    <link rel="stylesheet" href="{{SITEURL}}/theme/css/flaticon.min.css"/>
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#navbar-menu" data-offset="100">
-
-{% block preloader %}
-{% endblock %}
 
 {% block navbar %}
 {% endblock %}

@@ -8,9 +8,7 @@
                 <h3>{{ SECOND_CONTENT_CLASSIC.name|title }}</h3>
                 <p class="overlay_content" style="font-weight: bold;">
                     {% set ingredients = SECOND_CONTENT_CLASSIC.desc.split(',') %}
-                    {% for it in ingredients %}
-                    <span class="glyphicon-asterisk">{{it}}</span>
-                    {% endfor%}
+                    {% for it in ingredients %} * {{it}} {% endfor%}
                 </p>
             </div>
         </div>

@@ -15,28 +15,6 @@ nav.bootsnav .container {
     position: relative;
 }
 
-/* Navbar
-=================================*/
-nav.navbar.bootsnav {
-    margin-bottom: 0;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
-    background-color: #fff;
-    border: none;
-    border-bottom: solid 1px #e0e0e0;
-    z-index: 9;
-}
-
-/* Navbar Full
-=================================*/
-
-nav.bootsnav.navbar-full .navbar-header {
-    display: block;
-    width: 100%;
-}
-
 /* Side Menu
 =================================*/
 body {

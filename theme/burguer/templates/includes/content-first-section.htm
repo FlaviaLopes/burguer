@@ -12,7 +12,7 @@
                 <h2>{{ FIRST_CONTENT_FEATURED.name|title }}</h2>
                 <div style="font-weight: bold">
                     {% set ingredients = FIRST_CONTENT_FEATURED.desc.split(',') %}
-                    <p>{% for it in ingredients %} <span class="glyphicon-asterisk">{{it}}</span> {%
+                    <p>{% for it in ingredients %} * {{it}} {%
                         endfor %}</p>
                 </div>
             </div>
@@ -28,7 +28,7 @@
             </div>
             <div class="signature_content">
                 {% set ingredients = FIRST_CONTENT_SIGNATURE.desc.split(',') %}
-                <p>{% for it in ingredients %} <span class="glyphicon-asterisk">{{it}}</span> {% endfor %}</p>
+                <p>{% for it in ingredients %} * {{it}} {% endfor %}</p>
             </div>
         </div>
     </div>
