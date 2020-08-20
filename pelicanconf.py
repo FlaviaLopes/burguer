@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from datetime import date
 import os
 import sys
+
 sys.path.append(os.curdir)
 from data import *
 
@@ -31,4 +32,3 @@ LOAD_CONTENT_CACHE = False
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
-

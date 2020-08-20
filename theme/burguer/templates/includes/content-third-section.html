@@ -18,9 +18,7 @@
                 <h2>{{ it.name|title }}</h2>
                 {% set ingredients = it.desc.split(',') %}
                 <p style="font-weight: bold">
-                    {% for it in ingredients %}
-                    <span class="glyphicon-asterisk">{{it}}</span>
-                    {% endfor %}
+                    {% for it in ingredients %} * {{it}} {% endfor %}
                 </p>
             </div>
         </div>
