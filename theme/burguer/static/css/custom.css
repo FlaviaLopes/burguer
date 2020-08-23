@@ -183,49 +183,6 @@ header .caption {
     width: 168px;
 }
 
-/* Second Secition */
-/* Classic */
-@media (min-width: 992px) {
-    .classic {
-        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
-        margin-top: 25px;
-        height: 360px;
-        position: relative;
-        overflow: hidden;
-    }
-}
-@media (max-width: 991px) {
-    .classic {
-        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
-        background-size: 100% 100%;
-        margin-top: 25px;
-        height: 430px;
-        position: relative;
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 767px) {
-    .classic {
-        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
-        background-size: 100% 100%;
-        margin-top: 25px;
-        height: 400px;
-        position: relative;
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 479px) {
-    .classic {
-        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
-        margin-top: 25px;
-        height: 300px;
-        position: relative;
-        overflow: hidden;
-    }
-}
-
 .classic_btn {
     background: #dc9e15 none repeat scroll 0 0;
     color: #fff;
@@ -580,7 +537,7 @@ footer h4 {
     font-weight: 700;
     font-size: 15px;
     color: #fff;
-    padding: 0px 5px;
+    padding: 0 5px;
 }
 
 /* Contact Us and Subscribe */
@@ -642,8 +599,36 @@ address, .schedule > p {
 
 }
 
+@media (min-width: 992px) {
+    /*First section*/
+    .feature {
+        background: url('../images/primeira-sessao/feature_bg.jpg') no-repeat;
+        background-size: 100% 100%;
+        height: 360px;
+        overflow: hidden;
+        margin-top: 100px;
+    }
+
+    .signature {
+        background: url('../images/primeira-sessao/signature.jpg') no-repeat;
+        background-size: 100% 100%;
+        height: 360px;
+        padding: 0 18px 18px;
+        margin-top: 100px;
+    }
+
+    /*Second section*/
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        margin-top: 25px;
+        height: 360px;
+        position: relative;
+        overflow: hidden;
+    }
+}
 
 /* media query for other devices */
+
 @media (max-width: 1199px) {
     .attr-nav {
         margin-right: 0;
@@ -670,6 +655,36 @@ address, .schedule > p {
 }
 
 @media (max-width: 991px) {
+
+    /*First section*/
+    .feature {
+        background: url('../images/primeira-sessao/feature_bg.jpg') no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+        margin-top: 100px;
+    }
+
+    .signature {
+        background: url('../images/primeira-sessao/signature.jpg') no-repeat;
+        background-size: 100% 100%;
+        padding: 0 18px 18px;
+        margin-top: 100px;
+    }
+
+    .feature, .signature {
+        height: 300px;
+    }
+
+    /*Second section*/
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin-top: 25px;
+        height: 430px;
+        position: relative;
+        overflow: hidden;
+    }
+
     h2 {
         font-size: 30px;
     }
@@ -681,10 +696,6 @@ address, .schedule > p {
     .inner_banner {
         margin-left: 150px;
         margin-top: 50px;
-    }
-
-    .feature, .signature {
-        height: 300px;
     }
 
     .shack_burger > h2 {
@@ -780,6 +791,35 @@ address, .schedule > p {
 }
 
 @media (max-width: 767px) {
+    /*First section*/
+    .feature {
+        background: url('../images/primeira-sessao/feature_bg.jpg') no-repeat;
+        background-size: 100% 100%;
+        height: 300px;
+        overflow: hidden;
+        /*margin-top: 50px;*/
+        margin-top: 100px;
+    }
+
+    .signature {
+        background: url('../images/primeira-sessao/signature.jpg') no-repeat;
+        background-size: 100% 100%;
+        height: 300px;
+        padding: 0 18px 18px;
+        margin-top: 100px;
+        /* margin-top: 25px;*/
+    }
+
+    /*Second section*/
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin-top: 25px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+    }
+
     h1 {
         font-size: 50px;
     }
@@ -818,10 +858,6 @@ address, .schedule > p {
         width: 120px;
     }
 
-    .feature {
-        margin-top: 50px;
-    }
-
     .classic .overlay {
         line-height: 16px;
         padding: 15px 15px 5px;
@@ -831,9 +867,6 @@ address, .schedule > p {
         margin-bottom: 10px;
     }
 
-    .signature {
-        margin-top: 25px;
-    }
 
     .signature_content {
         width: 180px;
@@ -851,7 +884,7 @@ address, .schedule > p {
     }
 
     #carousel .carousel-caption > p {
-        margin-rigsubscribeht: 0;
+        margin-right: 0;
     }
 
     #carousel .carousel-caption > p, #carousel .carousel-caption > .info_btn_shadow {
@@ -866,6 +899,32 @@ address, .schedule > p {
 }
 
 @media (max-width: 479px) {
+    /*First section*/
+    .feature {
+        background: url('../images/primeira-sessao/feature_bg.jpg') no-repeat;
+        background-size: 100% 100%;
+        height: 300px;
+        overflow: hidden;
+        margin-top: 100px;
+    }
+
+    .signature {
+        background: url('../images/primeira-sessao/signature.jpg') no-repeat;
+        background-size: 100% 100%;
+        height: 300px;
+        padding: 0 18px 18px;
+        margin-top: 100px;
+    }
+
+    /*Second section*/
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        margin-top: 25px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+
     h1 {
         font-size: 40px;
     }
