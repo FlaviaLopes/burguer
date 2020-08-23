@@ -1,4 +1,5 @@
 HOWTO
+content/*
 deploy
 *.pid
 output
