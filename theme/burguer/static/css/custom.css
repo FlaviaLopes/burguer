@@ -185,6 +185,47 @@ header .caption {
 
 /* Second Secition */
 /* Classic */
+@media (min-width: 992px) {
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        margin-top: 25px;
+        height: 360px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+@media (max-width: 991px) {
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin-top: 25px;
+        height: 430px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        background-size: 100% 100%;
+        margin-top: 25px;
+        height: 400px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 479px) {
+    .classic {
+        background: url(../images/segunda-sessao/classic_bg.jpg) no-repeat;
+        margin-top: 25px;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+    }
+}
+
 .classic_btn {
     background: #dc9e15 none repeat scroll 0 0;
     color: #fff;

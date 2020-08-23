@@ -1,8 +1,7 @@
 <!-- Second section -->
 <div class="row">
     <div class="col-md-6">
-        <div class="classic" style="background: url({{SITEURL}}/theme/images/segunda-sessao/{{SECOND_CONTENT_CLASSIC.image}})no-repeat;
-        background-size: 100% 100%;margin-top:25px;height:360px;position:relative;overflow:hidden;">
+        <div class="classic">
             <span class="classic_btn">Clássico</span>
             <div class="overlay">
                 <h3>{{ SECOND_CONTENT_CLASSIC.name|title }}</h3>
@@ -35,7 +34,7 @@
                 {% for it in SECOND_CONTENT_CAROUSEL %}
                 <div class="{% if loop.index == 1 %}item active{% else %}item{% endif %}">
                     <span class="info_btn">{{ it.name|title }}</span>
-                    <img src="{{SITEURL}}/theme/images/segunda-sessao/{{it.image}}" alt="{{it.name}}"/>
+                    <img class="image-process-small" src="{{SITEURL}}/images/segunda-sessao/{{it.image}}" alt="{{it.name}}"/>
                 </div>
                 {% endfor %}
             </div><!-- carousel inner end -->
