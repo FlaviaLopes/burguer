@@ -50,7 +50,7 @@ IMAGE_PROCESS = {
                    ],
         'default': '1x',
     },
-    'large': {
+    'large-carousel': {
         'type': 'responsive-image',
         'sizes': '(min-width: 1200px) 800px, (min-width: 992px) 650px, (min-width: 769px) 718px, 100vw',
         'srcset': [('600w', ["scale_in 600 450 True"]),
