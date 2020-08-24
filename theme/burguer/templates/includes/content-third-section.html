@@ -4,8 +4,7 @@
     <!-- Indicators -->
     <ol class="carousel-indicators">
         {% for it in THIRD_CONTENT_CAROUSEL %}
-        <li data-target="#carousel" data-slide-to="{{ loop.index - 1}}" {% if loop.index== 1 %}class="active" {% endif
-            %}></li>
+        <li data-target="#carousel" data-slide-to="{{loop.index - 1}}" {%if loop.index== 1%}class="active" {%endif%}></li>
         {% endfor %}
     </ol>
 
@@ -13,7 +12,7 @@
     <div class="carousel-inner" role="listbox">
         {% for it in THIRD_CONTENT_CAROUSEL %}
         <div class="{% if loop.index == 1 %}item active{% else %}item{% endif %}">
-            <img src="{{SITEURL}}/theme/images/terceira-sessao/{{it.image}}" alt="{{it.name}}">
+            <img class="image-process-large-carousel" src="{{SITEURL}}/images/terceira-sessao/{{it.image}}" alt="{{it.name}}">
             <div class="carousel-caption">
                 <h2>{{ it.name|title }}</h2>
                 {% set ingredients = it.desc.split(',') %}

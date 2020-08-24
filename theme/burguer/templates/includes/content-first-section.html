@@ -4,14 +4,13 @@
     <div class="col-sm-8">
         <div class="feature">
             <div class="shack_burger">
-                <div class="chicken">
-                    <img src="{{SITEURL}}/theme/images/primeira-sessao/chicken.png" alt="Chicken"/>
-                </div>
-                <h2>{{ FIRST_CONTENT_FEATURED.name|title }}</h2>
-                <div style="font-weight: bold">
-                    {% set ingredients = FIRST_CONTENT_FEATURED.desc.split(',') %}
-                    <p>{% for it in ingredients %} * {{it}} {%
-                        endfor %}</p>
+                <div class="feature_text">
+                    <h2>{{ FIRST_CONTENT_FEATURED.name|title }}</h2>
+                    <div style="font-weight: bold">
+                        {% set ingredients = FIRST_CONTENT_FEATURED.desc.split(',') %}
+                        <p>{% for it in ingredients %} * {{it}} {%
+                            endfor %}</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -28,4 +27,4 @@
             </div>
         </div>
     </div>
-</div><!-- first section end -->l>
+</div><!-- first section end -->

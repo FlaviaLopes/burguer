@@ -34,7 +34,7 @@
                 {% for it in SECOND_CONTENT_CAROUSEL %}
                 <div class="{% if loop.index == 1 %}item active{% else %}item{% endif %}">
                     <span class="info_btn">{{ it.name|title }}</span>
-                    <img class="image-process-small" src="{{SITEURL}}/images/segunda-sessao/{{it.image}}" alt="{{it.name}}"/>
+                    <img class="image-process-small-carousel" src="{{SITEURL}}/images/segunda-sessao/{{it.image}}" alt="{{it.name}}"/>
                 </div>
                 {% endfor %}
             </div><!-- carousel inner end -->
