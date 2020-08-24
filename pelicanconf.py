@@ -22,7 +22,7 @@ DEFAULT_METADATA = {
 }
 PATH = 'content'
 TIMEZONE = 'America/Sao_Paulo'
-DEFAULT_LANG = 'pt_BR'
+DEFAULT_LANG = 'pt-br'
 CURRENTYEAR = date.today().year
 
 ### adicionado ###
