@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Maitree:400,700);
-@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+@import url("https://fonts.googleapis.com/css?family=Maitree:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
 
 /* General styles */
 body {
@@ -108,6 +108,38 @@ header .caption {
     margin-bottom: 12px;
     margin-left: 28px;
     text-transform: uppercase;
+}
+
+/* MEGAMENU STYLE
+=================================*/
+nav.bootsnav .container {
+    position: relative;
+}
+
+/* Side Menu
+=================================*/
+body {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Transparent
+=================================*/
+nav.navbar.bootsnav.navbar-fixed {
+    position: fixed;
+    display: block;
+    width: 100%;
+}
+
+nav.navbar.bootsnav.no-background {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 .feature_text {
@@ -610,7 +642,25 @@ address, .schedule > p {
     }
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
+    body.wrap-nav-sidebar .wrapper .container {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Navbar Transparent
+    =================================*/
+    nav.navbar.bootsnav.no-background {
+        background-color: transparent;
+        border: none;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
     header {
         background-size: 100% auto;
         color: #f1f1f1;
@@ -649,7 +699,6 @@ address, .schedule > p {
 
 }
 
-
 @media (min-width: 992px) {
     /*First section*/
     .feature {
@@ -676,6 +725,49 @@ address, .schedule > p {
         position: relative;
         overflow: hidden;
     }
+}
+
+@media (max-width: 992px) {
+    /* Navbar Responsive
+    =================================*/
+    nav.navbar.bootsnav .navbar-brand {
+        display: inline-block;
+        float: none !important;
+        margin: 0 !important;
+    }
+
+    nav.navbar.bootsnav .navbar-header {
+        float: none;
+        display: block;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+
+    nav.navbar.bootsnav .navbar-nav {
+        float: none !important;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: 0px -15px;
+    }
+
+    nav.navbar.bootsnav .navbar-nav > li {
+        float: none;
+    }
+
+    /* Navbar full Responsive
+    =================================*/
+    nav.bootsnav.navbar-full .navbar-brand {
+        float: left !important;
+        padding-left: 0;
+    }
+
+    nav.bootsnav.navbar-full .navbar-header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
 }
 
 @media (max-width: 991px) {
@@ -825,6 +917,22 @@ address, .schedule > p {
         max-height: 361px;
         background: url('../images/capa/capa_767.jpeg') no-repeat;
     }
+
+    /*navbar*/
+    nav.navbar.bootsnav .navbar-header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav.navbar.bootsnav .navbar-nav {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav.bootsnav.navbar-full .navbar-header {
+        padding-right: 0;
+    }
+
 
     /*First section*/
     .feature {
