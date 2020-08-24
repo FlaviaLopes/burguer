@@ -1,22 +1,17 @@
 <!-- Header -->
-<header style="background: url({{SITEURL}}/theme/images/capa/capa.jpg)no-repeat;
-background-size: 100% 100%;
-color: #f1f1f1;overflow: hidden;">
+<header>
     <!-- Container -->
     <div class="container">
-        <div class="row">
+        <div class="row header-1400">
             <div class="col-md-8 col-md-offset-2">
                 <div class="banner">
-                    <h3>{{HEADER.title}}</h3>
-                    <h1>{{HEADER.subtitle}}</h1>
+                    <h3 class="hidden-xs">{{HEADER.title}}</h3>
+                    <h1 class="hidden-xs">{{HEADER.subtitle}}</h1>
 
-                    <div class="inner_banner">
+                    <div class="inner_banner hidden-sm hidden-xs">
                         <div class="banner_content">
                             {% set ingredients = HEADER.text.split(',') %}
                             <p style="font-weight: bold">{% for it in ingredients %}* {{it}} {% endfor %}</p>
-                        </div>
-                        <div class="stamp">
-                            <img src="{{SITEURL}}/theme/images/capa/stamp.png" alt=""/>
                         </div>
                     </div>
                 </div>
