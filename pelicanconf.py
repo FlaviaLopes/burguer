@@ -72,5 +72,17 @@ IMAGE_PROCESS = {
             ('2560w', ["scale_in 3040 1600 True"]),
         ],
         'default': '250w',
+    },
+    'small-carousel': {
+        'type': 'responsive-image',
+        'sizes': '(min-width: 992px) 455px, (min-width: 768px) 720px, '
+                 '\ (min-width: 480px) 450px, (min-width: 320px) 290px',
+        'srcset': [
+            ('455w', ["scale_in 455 295 True"]),
+            ('720w', ["scale_in 720 467 True"]),
+            ('450w', ["scale_in 450 292 True"]),
+            ('290w', ["scale_in 290 188 True"])
+        ],
+        'default': '450w',
     }
 }

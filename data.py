@@ -7,37 +7,37 @@ HEADER = {
 
 # -------- First Section content -------------- #
 FIRST_CONTENT_FEATURED = {
-    'image': 'feature_bg.jpg',
+    'image': 'feature_bg.jpeg',
     'name': 'x-frango',
     'desc': 'pão,frango,ovo,alface,milho,presunto,queijo'
 }
 
 FIRST_CONTENT_SIGNATURE = {
-    'image': 'signature.jpg',
+    'image': 'signature.jpeg',
     'name': 'x-bacon',
     'desc': 'pão,bacon,ovo,alface,milho,presunto,queijo'
 }
 
 # -------- Second Section content -------------- #
 SECOND_CONTENT_CLASSIC = {
-    'image': 'classic_bg.jpg',
+    'image': 'classic_bg.jpeg',
     'name': 'x-tudo',
     'desc': 'pão,frango,bacon,calabreza,carne,ovo,alface,milho,presunto,queijo'
 }
 
 SECOND_CONTENT_CAROUSEL = [
     {
-        'image': 'mais_vendido1.jpg',
+        'image': 'mais_vendido1.jpeg',
         'name': 'x-salada',
         'desc': 'pão,tomate,ovo,alface,milho,presunto,queijo'
     },
     {
-        'image': 'mais_vendido2.jpg',
+        'image': 'mais_vendido2.jpeg',
         'name': 'sanduba tropical',
         'desc': 'pão,abacaxi,bacon,carne,presunto,queijo'
     },
     {
-        'image': 'mais_vendido3.jpg',
+        'image': 'mais_vendido3.jpeg',
         'name': 'à moda da casa',
         'desc': 'pão,carne,bacon,calabraza,tomate,ovo,alface,milho,presunto,queijo'
     }
@@ -46,17 +46,17 @@ SECOND_CONTENT_CAROUSEL = [
 # -------- Third Section content -------------- #
 THIRD_CONTENT_CAROUSEL = [
     {
-        'image': 'large_slider_img.jpg',
+        'image': 'large_slider_img.jpeg',
         'name': 'bebidas variadas',
         'desc': 'refrigerantes,sucos naturais,vitaminas,cerveja.'
     },
     {
-        'image': 'large_slider_img.jpg',
+        'image': 'large_slider_img.jpeg',
         'name': 'caldos e refeições',
         'desc': 'caldo de carne,caldo de frango,filé com batata frita'
     },
     {
-        'image': 'large_slider_img.jpg',
+        'image': 'large_slider_img.jpeg',
         'name': 'pizzas',
         'desc': 'mussarela,carne seca,bacon,vegetariana,calabreza.'
     }
