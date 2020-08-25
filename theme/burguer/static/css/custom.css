@@ -10,7 +10,7 @@ body {
     background: #efe9dd;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .banner p.title {
     text-transform: uppercase;
     font-family: 'Luckiest Guy', cursive;
     margin: 0;
@@ -65,16 +65,18 @@ nav.navbar.bootsnav {
     margin-top: 67px;
 }
 
-.banner > h3 {
+.banner > p.title {
     font-size: 32px;
     letter-spacing: 4px;
     text-align: center;
     color: #f1f1f1;
+    padding-top: 20px;
 }
 
 .banner h1 {
     text-align: center;
-    color: #f1f1f1
+    color: #f1f1f1;
+    padding-top: 20px;
 }
 
 .inner_banner {
@@ -208,7 +210,7 @@ nav.navbar.bootsnav.no-background {
 }
 
 .classic_btn {
-    background: #dc9e15 none repeat scroll 0 0;
+    background: #d14449 none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
     font-size: 22px;
@@ -227,8 +229,8 @@ nav.navbar.bootsnav.no-background {
 .classic_btn:after {
     content: "";
     position: absolute;
-    border-top: 18px solid #dc9e15;
-    border-bottom: 18px solid #dc9e15;
+    border-top: 18px solid #d14449;
+    border-bottom: 18px solid #d14449;
     border-right: 10px solid transparent;
     right: -10px;
     top: 0;
@@ -414,7 +416,7 @@ nav.navbar.bootsnav.no-background {
     width: 450px;
 }
 
-#carousel .carousel-caption > h2 {
+#carousel .carousel-caption > h3 {
     font-size: 32pt;
     font-weight: bold;
     line-height: 70px;
@@ -518,7 +520,7 @@ footer {
     padding-bottom: 42px;
 }
 
-footer h4 {
+footer h2 {
     font-family: 'Maitree', serif;
     margin-top: 20px;
     text-transform: capitalize;
@@ -878,13 +880,9 @@ address, .schedule > p {
         width: 350px;
     }
 
-    #carousel .carousel-caption > h2 {
+    #carousel .carousel-caption > h3 {
         font-size: 40px;
         line-height: 55px;
-    }
-
-    #carousel .carousel-caption > h3 {
-        font-size: 30px;
     }
 
     #carousel .carousel-caption > .info_btn_shadow {
@@ -991,7 +989,7 @@ address, .schedule > p {
         margin-top: 60px;
     }
 
-    .banner > h3 {
+    .banner > p.title {
         font-size: 26px;
         letter-spacing: 10px;
     }
@@ -1104,7 +1102,7 @@ address, .schedule > p {
         margin-top: 70px;
     }
 
-    .banner > h3 {
+    .banner > p.title {
         font-size: 20px;
         letter-spacing: 8px;
     }
@@ -1156,7 +1154,7 @@ address, .schedule > p {
         right: 20px;
     }
 
-    #carousel .carousel-caption > h2 {
+    #carousel .carousel-caption > h3 {
         font-size: 30px;
         line-height: 40px;
     }
