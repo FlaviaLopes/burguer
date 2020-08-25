@@ -5,7 +5,7 @@
             <span class="classic_btn">Clássico</span>
             <div class="overlay">
                 <h3>{{ SECOND_CONTENT_CLASSIC.name|title }}</h3>
-                <p class="overlay_content" style="font-weight: bold;">
+                <p>
                     {% set ingredients = SECOND_CONTENT_CLASSIC.desc.split(',') %}
                     {% for it in ingredients %} * {{it}} {% endfor%}
                 </p>
@@ -30,9 +30,9 @@
                 <div class="clearfix"></div>
             </div>
             <!-- carousel inner -->
-            <div class="carousel-inner" role="listbox">
+            <div class="carousel-inner" aria-label="Mais Vendidos" role="listbox">
                 {% for it in SECOND_CONTENT_CAROUSEL %}
-                <div class="{% if loop.index == 1 %}item active{% else %}item{% endif %}">
+                <div role="option" class="{% if loop.index == 1 %}item active{% else %}item{% endif %}">
                     <span class="info_btn">{{ it.name|title }}</span>
                     <img class="image-process-small-carousel" src="{{SITEURL}}/images/segunda-sessao/{{it.image}}" alt="{{it.name}}"/>
                 </div>

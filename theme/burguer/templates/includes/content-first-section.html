@@ -6,7 +6,7 @@
             <div class="shack_burger">
                 <div class="feature_text">
                     <h2>{{ FIRST_CONTENT_FEATURED.name|title }}</h2>
-                    <div style="font-weight: bold">
+                    <div>
                         {% set ingredients = FIRST_CONTENT_FEATURED.desc.split(',') %}
                         <p>{% for it in ingredients %} * {{it}} {%
                             endfor %}</p>

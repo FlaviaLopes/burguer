@@ -9,14 +9,14 @@
     </ol>
 
     <!-- carousel inner -->
-    <div class="carousel-inner" role="listbox">
+    <div class="carousel-inner" aria-label="Principais Produtos" role="listbox">
         {% for it in THIRD_CONTENT_CAROUSEL %}
-        <div class="{% if loop.index == 1 %}item active{% else %}item{% endif %}">
+        <div role="option" class="{% if loop.index == 1 %}item active{% else %}item{% endif %}">
             <img class="image-process-large-carousel" src="{{SITEURL}}/images/terceira-sessao/{{it.image}}" alt="{{it.name}}">
             <div class="carousel-caption">
-                <h2>{{ it.name|title }}</h2>
+                <h3>{{ it.name|title }}</h3>
                 {% set ingredients = it.desc.split(',') %}
-                <p style="font-weight: bold">
+                <p>
                     {% for it in ingredients %} * {{it}} {% endfor %}
                 </p>
             </div>

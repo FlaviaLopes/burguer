@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
                 <div class="schedule col-xs-offset-3">
-                    <h4>Horário</h4>
+                    <h2>Horário</h2>
                     <p><span style="font-weight: bold">{{SITENAME}}</span> abre nos seguintes horários:</p>
                     <p>
                         {% for it in SCHEDULE %}
@@ -18,28 +18,28 @@
             <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
                 <div class="contact_us col-xs-offset-3">
                     {% if CONTACT %}
-                    <h4>Contato</h4>
+                    <h2>Contato</h2>
                     {% for it in CONTACT %}
                     {% if it.type == 'email' %}
-                    <a href="mailto:{{it.contact}}">
+                    <a href="mailto:{{it.contact}}" title="E-mail">
                         <span class="ico ico-paperclip"> {{it.contact}}</span>
                     </a>
                     {% endif %}
                     {% if it.type == 'phone' %}
                     {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:8], it.contact[8:]) %}
-                    <a href="tel:{{it.contact}}">
+                    <a href="tel:{{it.contact}}" title="Telefone">
                         <span class="ico ico-phone"> {{contact}}</span>
                     </a>
                     {% endif %}
                     {% if it.type == 'mobile' %}
                     {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
-                    <a href="tel:{{it.contact}}">
+                    <a href="tel:{{it.contact}}" title="Mobile">
                         <span class="ico ico-mobile-phone"> {{contact}}</span>
                     </a>
                     {% endif %}
                     {% if it.type == 'zap' %}
                     {% set contact = '({}) {}-{}'.format(it.contact[2:4], it.contact[4:9], it.contact[9:]) %}
-                    <a href="https://api.whatsapp.com/send?phone={{it.contact}}">
+                    <a href="https://api.whatsapp.com/send?phone={{it.contact}}" title="WhatsApp">
                         <span class="ico ico-whatsapp"> {{contact}}</span>
                     </a>
                     {% endif %}
@@ -57,7 +57,7 @@
 
             <div class="col-lg-4 col-sm-4 col-xs-12 pull-right">
                 <div class="basic_info col-xs-offset-3">
-                    <a href="">
+                    <a href="" title="Logo">
                         <img class="footer_logo" src="{{SITEURL}}/theme/images/footer_logo.png"
                              alt="Burger"/>
                     </a>
@@ -65,7 +65,7 @@
                     {% if SOCIAL %}
                     <ul class="list-inline social">
                         {% for name, link in SOCIAL %}
-                        <li><a href="{{link}}" class="ico ico-{{name}}"></a></li>
+                        <li><a href="{{link}}" class="ico ico-{{name}}" title="{{name}}"></a></li>
                         {% endfor %}
                     </ul>
                     {% endif %}
@@ -74,13 +74,13 @@
                         <p class="wow fadeInRight" data-wow-duration="1s">
                             Made with
                             <a target="_blank" rel="noopener"
-                               href="https://bootstrapthemes.co/item/burger-free-bootstrap-restaurant-landing-page-template/">Bootstrap
-                                Themes</a> <br/>
+                               href="https://bootstrapthemes.co/item/burger-free-bootstrap-restaurant-landing-page-template/"
+                               title="Bootstrap Themes">Bootstrap Themes</a> <br/>
                         </p>
                         <p class="wow fadeInRight" data-wow-duration="1s">
                             Alterado, publicado e mantido
                             por
-                            <a target="_blank" rel="noopener" href="https://www.flavialopes.dev">Flávia Lopes</a> <br/>
+                            <a target="_blank" rel="noopener" href="https://www.flavialopes.dev" title="Flávia Lopes">Flávia Lopes</a> <br/>
                             {{CURRENTYEAR}}. All Rights Reserved
                         </p>
                     </div>
@@ -93,7 +93,7 @@
 
 <!-- scroll up-->
 <div class="scrollup">
-    <a href="#"><i class="ico ico-chevron-up"></i></a>
+    <a href="#" title="Scrollup"><i class="ico ico-chevron-up"></i></a>
 </div>
 
 <!-- JavaScript -->
