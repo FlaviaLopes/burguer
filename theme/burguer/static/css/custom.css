@@ -84,15 +84,16 @@ nav.navbar.bootsnav {
 
 .banner_content {
     float: left;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 16pt;
+    font-weight: bold;
+    line-height: 22px;
     margin-right: 20px;
     width: 330px;
+    text-align: center;
 }
 
 .banner_content p {
     margin-bottom: 15px;
-    font-size: 12pt;
 }
 
 .stamp {
@@ -144,6 +145,8 @@ nav.navbar.bootsnav.no-background {
 
 .feature_text {
     margin: 75% 10%;
+    font-weight: bold;
+    text-align: center;
 }
 
 /* First Section */
@@ -157,15 +160,6 @@ nav.navbar.bootsnav.no-background {
 .shack_burger > h2 {
     margin-bottom: 20px;
     text-align: center;
-}
-
-.feature .caption {
-    bottom: 0;
-    color: #f1f1f1;
-    font-size: 12px;
-    line-height: 12px;
-    left: 30px;
-    position: absolute;
 }
 
 /* signature */
@@ -210,6 +204,7 @@ nav.navbar.bootsnav.no-background {
     margin-left: 4px;
     margin-top: 42px;
     width: 168px;
+    text-align: center;
 }
 
 .classic_btn {
@@ -261,6 +256,8 @@ nav.navbar.bootsnav.no-background {
 
 .classic .overlay p {
     margin-bottom: 20px;
+    font-size: 14pt;
+    font-weight: bold;
 }
 
 /* Small Carousel */
@@ -297,6 +294,7 @@ nav.navbar.bootsnav.no-background {
 
 #small_carousel .carousel-caption > h3 {
     text-align: left;
+    padding-top: 20px;
 }
 
 #small_carousel hr {
@@ -325,13 +323,14 @@ nav.navbar.bootsnav.no-background {
 .info_btn {
     background: #d14149 none repeat scroll 0 0;
     color: #fff;
+    font-weight: bold;
     display: inline-block;
     font-size: 20px;
     left: -3px;
     padding: 6px 20px;
     position: absolute;
     text-transform: uppercase;
-    top: -3px;
+    top: 0;
     z-index: 1;
     text-shadow: none;
 }
@@ -416,19 +415,21 @@ nav.navbar.bootsnav.no-background {
 }
 
 #carousel .carousel-caption > h2 {
-    font-size: 55px;
+    font-size: 32pt;
+    font-weight: bold;
     line-height: 70px;
     text-align: left;
     letter-spacing: 0.1px;
 }
 
 #carousel .carousel-caption > h3 {
-    font-size: 39px;
+    font-size: 24pt;
     text-align: left;
 }
 
 #carousel .carousel-caption > p {
-    font-size: 18px;
+    font-size: 16pt;
+    font-weight: bold;
     line-height: 26px;
     margin-right: 40px;
     margin-top: 28px;
@@ -521,6 +522,8 @@ footer h4 {
     font-family: 'Maitree', serif;
     margin-top: 20px;
     text-transform: capitalize;
+    font-size: 16pt;
+    font-weight: bold;
 }
 
 /* Basic Info */
@@ -573,7 +576,7 @@ footer h4 {
 
 /* Contact Us and Subscribe */
 .contact_us > a, .schedule p {
-    color: #85898d;
+    color: #bec5cd;
     display: block;
     line-height: 24px;
     margin: 16px 0;
@@ -584,7 +587,7 @@ footer h4 {
 }
 
 address, .schedule > p {
-    color: #85898d;
+    color: #bec5cd;
     line-height: 24px;
 }
 
@@ -671,6 +674,14 @@ address, .schedule > p {
     }
 }
 
+@media (max-width: 1200px) {
+    header {
+        height: auto;
+        max-height: 467px;
+        background: url('../images/capa/capa.jpeg') no-repeat;
+    }
+}
+
 /* media query for other devices */
 
 @media (max-width: 1199px) {
@@ -700,6 +711,11 @@ address, .schedule > p {
 }
 
 @media (min-width: 992px) {
+
+    .banner_content {
+        width: 100%;
+    }
+
     /*First section*/
     .feature {
         background: url('../images/primeira-sessao/feature_bg.jpeg') no-repeat;
@@ -749,7 +765,7 @@ address, .schedule > p {
         float: none !important;
         padding-left: 30px;
         padding-right: 30px;
-        margin: 0px -15px;
+        margin: 0 -15px;
     }
 
     nav.navbar.bootsnav .navbar-nav > li {
@@ -913,7 +929,8 @@ address, .schedule > p {
 
 @media (max-width: 767px) {
     header {
-        height: auto;
+        background-size: 100% auto;
+        min-height: 300px;
         max-height: 361px;
         background: url('../images/capa/capa_767.jpeg') no-repeat;
     }
@@ -945,7 +962,6 @@ address, .schedule > p {
 
     .feature_text {
         display: block;
-        margin: 22px auto 0;
         margin: 50% 10%;
     }
 
@@ -1046,7 +1062,8 @@ address, .schedule > p {
         background: url('../images/capa/capa_479.jpeg') no-repeat;
         background-size: 100% auto;
         overflow: hidden;
-        height: 225px;
+        min-height: 200px;
+        max-height: 225px;
     }
 
     /*First section*/
@@ -1110,11 +1127,6 @@ address, .schedule > p {
 
     .chicken {
         margin: 0 auto;
-    }
-
-    .feature .caption {
-        left: auto;
-        right: 30px;
     }
 
     .classic, #small_carousel .carousel-inner > .item > a > img, #small_carousel .carousel-inner > .item > img {
